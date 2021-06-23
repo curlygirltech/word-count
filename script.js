@@ -55,7 +55,7 @@ input.addEventListener("keyup", function () {
   // reading time calculation
   if (isWord) {
     var seconds = Math.floor((isWord.length * 60) / 275);
-    // need to convert seconds to minutes and hours
+    // convert seconds to minutes and hours
     if (seconds > 59) {
       var minutes = Math.floor(seconds / 60);
       seconds = seconds - minutes * 60;
@@ -66,5 +66,25 @@ input.addEventListener("keyup", function () {
   } else {
     readingTime.innerHTML = "0s";
   }
+  
+  //Find the top keywords 
+  if (isWord) {
+    let Counter = 0;
+    let wordFrequency = {};
+    let highestFrequency;
 
-}
+    for (let word of isWord) {
+      wordFrequency[word] = (wordFrequency[word] || 0) + 1;
+
+      if (wordFrequency[word] > Counter) {
+        Counter = wordFrequency[word];
+        highestFrequency = word;
+      }
+    }
+
+  topKeywords.innerHTML = highestFrequency;
+  } else {
+  topKeywords.innerHTML = "N/A";
+  }
+
+});
