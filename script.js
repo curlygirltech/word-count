@@ -40,11 +40,23 @@ input.addEventListener("keyup", function () {
   }
 
   //bigram count logic
-  
+  if (isWord) {
+    let bigram = []
+    for (let i = 0; i < isWord.length - 1; i++) {
+
+      let word = isWord[i];
+      let nextWord = isWord[i + 1];
+      bigram.push(word + " " + nextWord);
+    }
+
+    bigramCount.innerHTML = bigram.length;
+  } else {
+    bigramCount.innerHTML = 0;
+  }
   
   // reading time calculation
   if (isWord) {
-    var seconds = Math.floor((words.length * 60) / 275);
+    var seconds = Math.floor((isWord.length * 60) / 275);
     // need to convert seconds to minutes and hours
     if (seconds > 59) {
       var minutes = Math.floor(seconds / 60);
