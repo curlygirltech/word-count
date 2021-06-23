@@ -3,7 +3,7 @@
 Project site link: [Word Counter](https://js-word-counter.netlify.app)
 
 # Description: 
-Word Counter that takes in a set of text and counts the words, characters, sentences, paragraphs, and bigrams. It also includes an average reading time, and frequently used keywords feature
+Word Counter that takes in a set of text and counts the words, characters, sentences, paragraphs, and bigrams. This was created with javascript and has no dependencies. It also includes an average reading time, and frequently used keywords feature
 
 # Additional Features:
 
