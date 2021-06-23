@@ -13,7 +13,7 @@ input.addEventListener("keyup", function () {
   // word counter logic
   characterCount.innerHTML = input.value.length;
   let isWord = input.value.match(/\b[-?(\w+)?]+\b/gi);
-  console.log(isWord);
+  
   if (isWord) {
     wordCount.innerHTML = isWord.length;
   } else {
@@ -23,7 +23,7 @@ input.addEventListener("keyup", function () {
   // sentence count logic
   if (isWord) {
     let sentences = input.value.split(/[.|!|?]+/g);
-    console.log(sentences);
+    
     sentenceCount.innerHTML = sentences.length - 1;
   } else {
     sentenceCount.innerHTML = 0;
@@ -32,7 +32,7 @@ input.addEventListener("keyup", function () {
   // paragragh count logic
   if (isWord) {
     let paragraphs = input.value.replace(/\n$/gm, "").split(/\n/);
-    console.log(paragraphs);
+    
     paragraphCount.innerHTML = paragraphs.length;
   } else {
     paragraphCount.innerHTML = 0;
