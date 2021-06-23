@@ -1,0 +1,21 @@
+body {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  background-color: #ffddd2;
+}
+
+.keywords, #topKeywords{
+  display: flex;
+  flex-flow: column;
+  font-size: 18px;
+
+}
+
+.count-div{
+  font-size: 18px;
+  padding: 10px;
+}
+#input {
+  border-radius: 10px;
+}
