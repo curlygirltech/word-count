@@ -9,13 +9,23 @@
   <script defer src="script.js"></script>
 </head>
 <body>
-  <h2>Word Count: <span id="count">0</span></h2>
-  <textarea id="input" placeholder="Enter your text here..."></textarea>
+  <h2>Word Counter</h2>
+  <textarea id="input" placeholder="Enter your text here..."rows="10" cols="50"></textarea>
   <div class="output row">
     <div>Characters: <span id="characterCount">0</span></div>
     <div>Words: <span id="wordCount">0</span></div>
-    <div>Sentences: <span id="wordCount">0</span></div>
-    <div>Paragraphs: <span id="wordCount">0</span></div>
+  </div>
+  <div class="output row">
+    <div>Sentences: <span id="sentenceCount">0</span></div>
+    <div>Paragraphs: <span id="paragraphCount">0</span></div>
+  </div>
+  <div class="output row">
+    <div>Bigram Count: <span id="bigramCount">0</span></div>
+    <div>Reading Time: <span id="readingTime">0</span></div>
+  <div class="keywords">
+    Top keywords:
+    <ul id="topKeywords">
+    </ul>
   </div>
 </body>
 </htmı>
